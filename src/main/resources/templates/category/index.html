@@ -8,23 +8,23 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<p th:unless="${categories} and ${categories.size()}">no categories:(</p>
+<p th:unless="${categories} and ${categories.size()}">no categories :(</p>
 
 
 <table class="table">
-
     <tr>
         <th>ID</th>
         <th>NAME</th>
-
     </tr>
 
     <tr th:each="category : ${categories}">
         <td th:text="${category.id}"></td>
         <td th:text="${category.name}"></td>
     </tr>
-
 </table>
+
+<a href="/category/add">Add Category</a>
+
 
 </body>
 </html>
